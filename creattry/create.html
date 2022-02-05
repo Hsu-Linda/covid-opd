@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="create.css">
+        <title>CREATE</title>
+    </head>
+    <body>
+        <div class="step"><!-- 順序-->
+            <div class="stepcircle">1</div>
+            <div class="stepcircle">2</div>
+            <div class="stepcircle">3</div>
+            <div class="stepcircle">4</div>
+            <h3>個人基本資料</h3>
+            <h3>掛號資料</h3>
+            <h3>covid 治療期間</h3>
+            <h3>療程結束後 是否定期回診</h3>
+        </div>
+        
+        <!-- 表單-->
+        <form method="post">        
+            <div class="group_bgwhite"> <!--個人基本資料    -->
+                <h3>個人基本資料</h3>
+                <div  class="input_group" ><!--姓名-->
+                    <label>姓名</label>
+                    <input type="text" required>
+                </div>
+                
+                <div  class="input_group" ><!--信箱-->
+                    <label>信箱</label>
+                    <input type="email" required>
+                    <p>表單提交後將寄送驗證碼至此信箱</p>
+                </div>
+
+                <div  class="input_group" ><!--身分證-->  <!--做自動大寫第一個字-->
+                    <label class="question">身分證</label>
+                    <input type="text" maxlength="10" minlength="10">
+                </div>
+                
+                <div class="input_group"><!--性別-->
+                    <label>性別</label>
+                    <div class="choose">
+                        <div class="choose_group">
+                            <input  type="radio" name="gender" id="genderM" value="1">
+                            <label  for="genderM">男</label>
+                        </div>
+                    
+                        <div class="choose_group">
+                            <input  type="radio" name="gender" id="genderF" value="0">
+                            <label  for="genderF">女</label>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+
+
+                <div class="input_group"> <!--出生年月日-->
+                    <label class="question">出生年月日</label>
+                    <input type="date">
+                </div>
+
+            </div>
+            <div class="group_bgwhite"><!--掛號資料    -->
+                <h3>掛號資料</h3>
+                <div  class="input_group" ><!--就診日期-->
+                    <label class="question">就診日期</label>
+                    <input type="date">
+                </div>
+
+                
+                <div class="input_group"><!--病歷號-->
+                    <label  class="question" >病歷號</label>
+                    <input type="text" minlength="10" maxlength="10">
+                    <p>不知道可以不用填寫</p>
+                </div>
+            </div>
+            
+           
+        <div class="group_bgwhite"> <!--covid 治療期間-->
+            <h3>covid 治療期間</h3>
+
+            <div class="input_group"><!--是否曾為COVID確診個案-->
+                <label>是否曾為COVID確診個案</label>
+                <div class="choose">
+                    <div class="choose_group">
+                        <input type="radio" name="isConfirmedCase" id="notConfirmed" value="0">
+                        <label for="notConfirmed">否</label>
+                    </div>
+                    <div class="choose_group">
+                        <input type="radio" name="isConfirmedCase" id="Confirmed" value="1">
+                        <label  for="Confirmed">是</label>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="input_group"><!--COVID治療地點-->
+                <label>COVID治療地點</label>
+                <select>
+                    <option selected>同時符合多項，選擇數字較小者</option>
+                    <option value="1">醫院</option>
+                    <option value="2">防疫旅館</option>
+                    <option value="3">家裡</option>
+                </select>
+            </div>     
+
+            <!-- 選擇醫院 再跳出此選項   -->
+            <div class="input_group"><!--COVID治療期間是否入住加護病房-->
+                <label >COVID治療期間是否入住加護病房</label>       
+                <div class="choose">
+                    <div class="choose_group">
+                        <input  type="radio" name="ICU" id="ICUF" value="0">
+                        <label  for="ICUF">否</label>
+                    </div>
+                    <div class="choose_group">
+                        <input  type="radio" name="ICU" id="ICUT" value="1">
+                        <label  for="ICUT">是</label>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="input_group"><!--確診日期-->
+                <label>確診日期</label>
+                <input type="date">
+            </div>
+
+            <div class="input_group"><!--出院日期-->
+                <label>出院日期 (如在家治療，請以解隔日期作紀錄)</label>
+                <input type="date">
+            </div>
+
+            <div class="input_group"><!--COVID治療期間 最嚴重的氧氣使用經驗-->
+                <label>COVID治療期間最嚴重的氧氣使用經驗</label>
+                <select>
+                    <option></option>
+                    <option value="0">無</option>
+                    <option value="1">鼻導管</option>
+                    <option value="2">呼吸面罩</option>
+                    <option value="3">高流量鼻導管</option>
+                    <option value="4">氣管內管插管</option>
+                </select>
+            </div>     
+            
+        </div>
+
+        <div class="group_bgwhite">
+            <h3>療程結束後 是否定期回診</h3>
+            <div class="input_group"><!--COVID之後是否有因為COVID定期回診-->
+                <label>COVID之後是否有因為COVID定期回診</label>
+                
+                <div class="choose">
+                    <div class="choose_group">
+                        <input  type="radio" name="followUpAppointment" id="appointmentF" value="0">
+                        <label  for="appointmentF">否</label>
+                    </div>
+                
+                    <div class="choose_group">
+                        <input  type="radio" name="followUpAppointment" id="appointmentT" value="1">
+                        <label  for="appointmentT">是</label>
+                    </div>
+                    <span></span>
+                </div>
+            </div>
+            
+            <!-- 選擇定期會診是 才出現此問題  -->
+            <div class="input_group"><!--如有因COVID定期回診請填回診科別-->
+                <label >如有因COVID定期回診請填回診科別</label>
+                <select >
+                    <option></option>
+                    <option value="1">胸腔科</option>
+                    <option value="2">感染科</option>
+                    <option value="3">復健科</option>
+                    <option value="4">神經科</option>
+                    <option value="5">精神科</option>
+                    <option value="6">其他</option>
+                </select>
+            </div>     
+        </div>
+    
+    
+    
+    
+        
+
+        
+
+    
+        
+        <input type="submit" value="儲存">
+    </form>
+    </div>                
+    </div> 
+</main>
+
+<!--做不是機器人-->
+  </body>
+</html>

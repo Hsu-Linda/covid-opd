@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: flex-start;  */
+    background-color:#E0E0E0 ;
+}
+
+body form{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+form .group_bgwhite {
+    padding: 50px 35px 10px 35px; 
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    margin:  10px;
+    width: 500px;
+}
+.group_bgwhite h3{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+.group_bgwhite .input_group{
+    margin: 2px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.input_group input,select{
+    margin: 2px 0 0 0 ;
+    padding:  0 0 0 5px;
+    height: 40px;
+    font-size: 16px;
+}
+.input_group .choose{
+    display:flex;
+    align-items: center;
+    margin: 3px 0 0 0;
+}
+.choose .choose_group{
+    flex: 1;
+}
+.choose span{
+    flex: 2;
+}
+.choose_group input{
+    height: 18px;
+    width: 18px;
+}
+
+
+
+
+/* 順序    */
+body .step{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step .stepcircle{
+    width: 50px;
+    height: 50px;
+    margin: 30px 0;
+    border-radius: 50%;
+    border: 1px solid #a0a0a0;
+
+}
